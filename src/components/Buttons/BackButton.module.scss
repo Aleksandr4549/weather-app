@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  color: #fff;
+  transition: .2s;
+
+  &:hover {
+    color: lighten(#372865, 20);
+  }
+}

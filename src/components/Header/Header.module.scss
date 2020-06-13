@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  background-color: #2b244d;
+  color: #fff;
+
+  div {
+    text-align: center;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.img__container {
+  max-width: 50px;
+  max-height: 50px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
