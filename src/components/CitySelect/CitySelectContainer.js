@@ -17,7 +17,7 @@ const SelectCityContainer = ({cities, cityData, setSelectedCityData}) => {
   useEffect(() => {
       if(state.selectedCityId) {
         setState(state => ({...state, isFetching: true}))
-        getWeather(state.selectedCityI)
+        getWeather(state.selectedCityId)
           .then(res => {
             const city = cities.filter(city => city.id === state.selectedCityId)[0];
             city.data = res.data
