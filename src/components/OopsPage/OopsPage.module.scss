@@ -1,7 +1,9 @@
 .oops {
-  background-image: url('../../accets/oops.jpg');
-  background-repeat: no-repeat;
-  width: 100vh;
-  height: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 0 auto;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
 }
