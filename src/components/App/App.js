@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import CitySelectContainer from '../CitySelect/CitySelectContainer';
@@ -12,6 +12,7 @@ import style from './App.module.scss';
 const App = () => {
   const [state, setState] = useState({
     cityData: null,
+    isError: false
   });
 
   const setSelectedCityData = data => {
@@ -32,8 +33,9 @@ const App = () => {
               cityData={state.cityData} 
           />)} 
         />
+
         <Route path={'/largeCard'}> 
-          {state.cityData ? 
+          {state.cityData &&
             <LargeCard 
               name={state.cityData.nameRu}
               temp={state.cityData.data.main.temp}
@@ -42,10 +44,10 @@ const App = () => {
               pressure={transformPressure(state.cityData.data.main.pressure)}
               humidity={state.cityData.data.main.humidity}
               windSpeed={state.cityData.data.wind.speed}
-            /> : 
-            <Redirect to='/' />
+            />
           }
         </Route>
+
         <Route path={'/oops'} render={() => <OopsPage />} />
       </Switch>
     </div>

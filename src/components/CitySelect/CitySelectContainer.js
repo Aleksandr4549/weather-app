@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import CitySelect from './CitySelect';
@@ -10,20 +11,23 @@ const SelectCityContainer = ({cities, cityData, setSelectedCityData}) => {
   const [state, setState] = useState({
     isFetching: false,
     selectedCityId: null,
+    isError: false
   });
 
   useEffect(() => {
       if(state.selectedCityId) {
         setState(state => ({...state, isFetching: true}))
-        getWeather(state.selectedCityId)
+        getWeather(state.selectedCityI)
           .then(res => {
             const city = cities.filter(city => city.id === state.selectedCityId)[0];
             city.data = res.data
-            city.timeRequest = Date.now()
             setSelectedCityData(city)
             setState(state => ({...state, isFetching: false}))
           })
-          .catch(err => console.log(err))
+          .catch(err => {
+            console.log(err);
+            setState({selectedCityId: null, isFetching: false, isError: true});
+          })
       }
   }, [state.selectedCityId, cities])
 
@@ -37,6 +41,10 @@ const SelectCityContainer = ({cities, cityData, setSelectedCityData}) => {
 
   if(state.isFetching) {
     return <Loader />
+  }
+
+  if(state.isError) {
+    return <Redirect to='oops' />
   }
 
   return (

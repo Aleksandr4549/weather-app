@@ -7,6 +7,7 @@ const OopsPage = () => {
   return (
     <div className={style.oops}>
       <BackButton url='/' />
+      <p>Sorry, something went wrong</p>
     </div>
   )
 };
