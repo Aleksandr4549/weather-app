@@ -4,9 +4,9 @@
 Клонируйте этот репозиторий
 `$ git clone https://github.com/Aleksandr4549/weather-app.git`
 
-Установите зависимости с помощью 
-`npm install`
-или
+Установите зависимости с помощью<br />
+`npm install`<br />
+или<br />
 `yarn install`
 
 Запустите проект
@@ -21,6 +21,6 @@ react-router<br />
 [prop-types](https://github.com/facebook/prop-types)<br />
 [axios](https://github.com/axios/axios)<br />
 [sass](https://github.com/sass/sass)<br />
-*[material-ui](https://github.com/mui-org/material-ui)<br />
+[material-ui](https://github.com/mui-org/material-ui)<br />
 API сайта <https://openweathermap.org><br />
  
