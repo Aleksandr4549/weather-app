@@ -16,11 +16,11 @@
 
 ### В проекте использованы
 
-*[Create React App](https://github.com/facebook/create-react-app)
-*react-router
-*[prop-types](https://github.com/facebook/prop-types)
-*[axios](https://github.com/axios/axios)
-*[sass](https://github.com/sass/sass)
-*[material-ui](https://github.com/mui-org/material-ui)
-*API сайта <https://openweathermap.org>
+[Create React App](https://github.com/facebook/create-react-app)<br />
+react-router<br />
+[prop-types](https://github.com/facebook/prop-types)<br />
+[axios](https://github.com/axios/axios)<br />
+[sass](https://github.com/sass/sass)<br />
+*[material-ui](https://github.com/mui-org/material-ui)<br />
+API сайта <https://openweathermap.org><br />
  
