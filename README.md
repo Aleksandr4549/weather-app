@@ -1,4 +1,5 @@
 Это приложение позволяет узнать текущую погоду в выбранном городе. 
+[Проект](https://aleksandr4549.github.io/weather-app/) на GitHub Pages
 
 ### Запуск проекта
 Клонируйте этот репозиторий<br />
@@ -10,12 +11,11 @@
 `yarn install`
 
 Запустите проект<br />
-`npm install start`<br />
+`npm start`<br />
 или<br />
 `yarn start`
 
 ### В проекте использованы
-
 [Create React App](https://github.com/facebook/create-react-app)<br />
 react-router<br />
 [prop-types](https://github.com/facebook/prop-types)<br />
